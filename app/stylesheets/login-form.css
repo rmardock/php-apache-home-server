@@ -1,0 +1,43 @@
+.form-container 
+{
+    background-color: #7e3e3e;
+    color: #ffffff;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4%;
+    width: 85%;
+}
+
+.form-input
+{
+    background-color: #3c3c45;
+    border: none;
+    color: #ffffff;
+    margin-top: 3%;
+}
+
+.form-button
+{
+    background-color: #d09a58;
+    color:#ffffff;
+    margin-top: 3%;
+    width: 30%
+}
+
+.form-text
+{
+    color: #ffffff;
+}
+
+.form-button:hover
+{
+    background-color: #d4c675;
+    color: #ffffff;
+}
+
+.form-input:focus
+{
+    background-color: #d4c675;
+    color: #3c3c45;
+}
