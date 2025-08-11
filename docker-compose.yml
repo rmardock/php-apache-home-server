@@ -7,6 +7,8 @@ services:
     container_name: web-server-container # php apache container name here
     ports:
       - "80:80" # hosted on port 80
+    networks:
+      - web_db
     volumes:
       - "./app:/var/www/html" # mount volume4
     restart: unless-stopped
@@ -14,9 +16,10 @@ services:
     image: mysql:latest
     container_name: users-db # mysql container name here
     volumes:
-      - "./app/sql:/var/lib/users-db" # mount sql files in container
-      - "/path-to-sql-dump:/docker-entrypoint-initdb.d" # use sql dump backup to init db on container start
-      - "/path-to-my.cnf/.my.cnf:/var/lib/.cnf/.my.cnf" # mount .my.cnf for passwordless auth
+      - "./db-data:/var/lib/mysql" # mount sql persistent data
+      - "./initdb/docker-entrypoint-initdb.d" # mount sql file to initdb.d
+      - "./cnf/my.cnf:/etc/mysql/my.cnf" # mount my.cnf 
+    env_file: .env # store passwords and other env vars here
     environment:
       MYSQL_ROOT_PASSWORD: db-root-pwd
       MYSQL_DATABASE: web-users
@@ -24,4 +27,9 @@ services:
       MYSQL_PASSWORD: db-pwd
     ports:
       - "3306:3306" # mysql server hosted on default port 
+    networks:
+      - web_db
     restart: unless-stopped
+networks:
+  web_db:
+    external: false

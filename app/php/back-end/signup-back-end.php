@@ -79,15 +79,15 @@
         // close database connection
         $mysqli->close();
         // target dir for current user preferences file
-        $target_path = "/var/www/html/users/config/" . "." . strval($username) . "_config.php";
+        $target_path = "/var/www/html/config/users/" . "." . strval($username) . "_config.php";
         // create array for user preferences
         $user_array = array(
             // example of creating categories for tiles
             // "category-name" =>
-            array("name" => "youtube", "url" => "https://www.youtube.com/", "icon_path" => "/tile-icons/youtube-icon.svg", "dark-mode" => true)
+            array("name" => "youtube", "url" => "https://www.youtube.com/", "icon-path" => "/tile-icons/youtube-icon.svg", "dark-mode" => true)
         );
         // write array to user's config file --*file will be created and written to with this function*--
-        file_put_contents($target_path, "<?php return" . var_export($user_array, true) . ";");
+        file_put_contents($target_path, "<?php return " . var_export($user_array, true) . ";");
         // set cookie params
         cookie_params();
         // set session variable

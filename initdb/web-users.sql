@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `swamp-users`;
-USE `swamp-users`;
+CREATE DATABASE IF NOT EXISTS `web-users`;
+USE `web-users`;
 
 DROP TABLE IF EXISTS `users`;
 

@@ -7,7 +7,7 @@
     $config_file = "";
     $file_path_header = "/var/www/html/config";
     $config_file_path = "";
-    
+    $target = ' target="_blank"';
     // add args for different configs here
     
     // example:
@@ -110,11 +110,14 @@
             $icon_path = "img/stack-icon.svg";
             $dark_mode_data_val = "1";
         }
+        if($name == "Home" || $name == "Admin Tools"){
+          $target = "";
+        }
         // replace spaces with '-' for html formatting
         $name_formatted = preg_replace('/\s+/', '-', $name);
         // build tiles dynamically with array values from config file
         echo'<div class="w3-card service-card default-tile w3-center">
-                <a id="'. $name_formatted . '-link" data-id="' . $id . '" target="_blank" class="w3-button service-button tile-link" href="'. $url . '">
+                <a id="'. $name_formatted . '-link" data-id="' . $id . '"' . $target . ' class="w3-button service-button tile-link" href="'. $url . '">
                     <img id="' . $name_formatted . '-image" data-dark-mode="' . $dark_mode_data_val . '" src="' . $icon_path . '" class="service-image" alt="' . $name . ' icon">
                     <div class="w3-container">
                         <h3 class="service-name">' . $name . '</h3>
