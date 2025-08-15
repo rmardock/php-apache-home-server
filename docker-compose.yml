@@ -17,14 +17,14 @@ services:
     container_name: users-db # mysql container name here
     volumes:
       - "./db-data:/var/lib/mysql" # mount sql persistent data
-      - "./initdb/docker-entrypoint-initdb.d" # mount sql file to initdb.d
+      - "./initdb:/docker-entrypoint-initdb.d" # mount sql file to initdb.d
       - "./cnf/my.cnf:/etc/mysql/my.cnf" # mount my.cnf 
     env_file: .env # store passwords and other env vars here
     environment:
-      MYSQL_ROOT_PASSWORD: db-root-pwd
+      MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
       MYSQL_DATABASE: web-users
-      MYSQL_USER: db-agent
-      MYSQL_PASSWORD: db-pwd
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${USER_PWD}
     ports:
       - "3306:3306" # mysql server hosted on default port 
     networks:

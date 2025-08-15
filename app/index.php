@@ -5,7 +5,6 @@
         header("Location: error.php");
         exit;
     }
-
     // access $_SESSION and assign variables
     $loggedin = empty($_SESSION["loggedin"]) ? FALSE : $_SESSION["loggedin"];
     $username = empty($_SESSION["username"]) ? null : $_SESSION["username"];

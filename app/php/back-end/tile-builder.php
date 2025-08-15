@@ -58,7 +58,7 @@
         }
         else{
             // assign file path
-            $config_file_path = $file_path_header . "/users/" . $config_file;
+            $config_file_path = $file_path_header . "/users/" . $config_file . ".php";
         }
     }
     

@@ -1,6 +1,6 @@
 <?php
     // cookie params file
-    require_once "./back-end/cookie_params.php";
+    require_once "../back-end/cookie_params.php";
 
     // access $_SESSION
     if(!session_start()) 
