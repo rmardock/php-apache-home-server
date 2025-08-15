@@ -4,7 +4,7 @@ return array(
     "name"=>"Pihole",
     "url"=>"http://pihole-url-here",
     "icon-path"=>"/tile-icons/pihole-icon.svg",
-    "darkmode"=>true,
+    "dark-mode"=>true,
   ),
 );
 ?>

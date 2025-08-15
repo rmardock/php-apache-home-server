@@ -4,7 +4,7 @@ return array(
     "name"=>"Home",
     "url"=>"http://127.0.0.1",
     "icon-path"=>"/tile-icons/home-icon.svg",
-    "darkmode"=>true,
+    "dark-mode"=>true,
   ),
 );
 ?>
