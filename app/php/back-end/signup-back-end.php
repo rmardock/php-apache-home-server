@@ -84,7 +84,7 @@
         $user_array = array(
             // example of creating categories for tiles
             // "category-name" =>
-            array("name" => "youtube", "url" => "https://www.youtube.com/", "icon-path" => "/tile-icons/youtube-icon.svg", "dark-mode" => true)
+            array("name" => "Youtube", "url" => "https://www.youtube.com/", "icon-path" => "/tile-icons/youtube-icon.svg", "dark-mode" => true)
         );
         // write array to user's config file --*file will be created and written to with this function*--
         file_put_contents($target_path, "<?php return " . var_export($user_array, true) . ";");
