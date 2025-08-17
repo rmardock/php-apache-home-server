@@ -28,7 +28,7 @@
 -->
 <html lang="en">
     <head>
-        <title>sign up</title>
+        <title>Sign Up</title>
         <meta charset="UTF-8">
         <!--link to local copy of jquery-->
         <script src="/jslib/jquery-3.5.1.min.js"></script>
@@ -49,7 +49,7 @@
                 // call cookie params function
                 cookie_params();
                 // show password not match message
-                echo "<div class='w3-container w3-center message-banner'><h4>passwords do not match!</h4></div>";
+                echo "<div class='w3-container w3-center message-banner'><h4>Passwords do not match!</h4></div>";
             }
             // if username is taken
             if($username_taken)
@@ -57,19 +57,19 @@
                 // call cookie params function
                 cookie_params();
                 // show username taken message
-                echo "<div class='w3-container w3-center message-banner'><h4>username taken! select another username.</h4></div>";
+                echo "<div class='w3-container w3-center message-banner'><h4>Username taken! Select another username.</h4></div>";
             }
         ?>
         <!--sign up form-->
         <div class="w3-container form-container">
             <form id="signupForm" action="/php/back-end/signup-back-end.php" method="POST">
-                <h2 class="w3-center form-text">sign up</h2>
-                <input name="username" id="username" class="w3-input form-input" placeholder="username" autofocus required>
-                <input type="password" name="password" id="password" class="w3-input form-input" placeholder="password" required>
-                <input type="password" name="password-conf" id="passowrd-conf" class="w3-input form-input" placeholder="confirm password" required>
-                <input type="submit" id="signup-submit" class="w3-btn form-button" value="submit">
+                <h2 class="w3-center form-text">Sign Up</h2>
+                <input name="username" id="username" class="w3-input form-input" placeholder="Username" autofocus required>
+                <input type="password" name="password" id="password" class="w3-input form-input" placeholder="Password" required>
+                <input type="password" name="password-conf" id="passowrd-conf" class="w3-input form-input" placeholder="Confirm Password" required>
+                <input type="submit" id="signup-submit" class="w3-btn form-button" value="Submit">
             </form>
-            <a class="w3-btn form-button" href="/">home</a>
+            <a class="w3-btn form-button" href="/">Home</a>
         </div>
     </body>
 </html>

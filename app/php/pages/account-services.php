@@ -22,7 +22,7 @@
 -->
 <html lang="en">
     <head>
-        <title>account</title>
+        <title>Account</title>
         <!--set the viewport-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
@@ -41,7 +41,7 @@
     <body>
         <div class="page-wrapper">
             <div class="title-bar">
-                <h1 class="page-title">account services</h1>
+                <h1 class="page-title">Account Services</h1>
                 <?php
                     if(!is_null($loggedin))
                     {
@@ -56,7 +56,7 @@
                     <button id="delete-link" class="w3-button service-button delete-button">
                         <img id="delete-image" src="/img/delete-icon.svg" class="service-image" alt="delete account icon">
                         <div class="w3-container">
-                            <h3 class="service-name">delete account</h3>
+                            <h3 class="service-name">Delete Account</h3>
                         </div>
                     </button>
                 </div>
@@ -65,14 +65,14 @@
                     <form class="confirm-wrapper" action="/php/back-end/delete-acc.php" method="POST">
                         <div class="w3-container">
                             <img id="confirm-link" src="/img/warning-icon.svg" class="service-image" alt="warning icon">
-                            <h3 class="service-name">delete account</h3>
-                            <h6 class="service-name">warning: this cannot be undone</h6>
+                            <h3 class="service-name">Delete Account</h3>
+                            <h6 class="service-name">Warning: This action cannot be undone</h6>
                             <div class="w3-button account-button">
                                 <input id="delete-submit" type="submit" value="">
-                                <h3 class="service-name">confirm</h3>
+                                <h3 class="service-name">Confirm</h3>
                             </div>
                             <div class="w3-button account-button">
-                                <h3 class="service-name">cancel</h3>
+                                <h3 class="service-name">Cancel</h3>
                             </div>
                         </div>
                     </form>

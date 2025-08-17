@@ -57,7 +57,7 @@
         <div class="page-wrapper">
             <div class="title-bar">
                 <button class="open-button">&#9776;</button>
-                <h1 class="page-title">home page</h1>
+                <h1 class="page-title">Home</h1>
             </div>
             <?php
                 // if account deleted
@@ -80,20 +80,20 @@
                 }
             ?>
             <!--google search-->
-            <div class="w3-row google-search-wrapper">
-                <form method="get" action="http://www.google.com/search" target="_blank">
-                    <input id="google-search" type="text" name="q" size="31" maxlength="255" placeholder="google search" autofocus/>
+            <div class="w3-row duckduckgo-search-wrapper">
+                <form method="get" action="http://www.duckduckgo.com/search" target="_blank">
+                    <input id="duckduckgo-search" type="text" name="q" size="31" maxlength="255" placeholder="Search" autofocus/>
                 </form>
             </div>
             <!--services pane div-->
             <div class="w3-row services-wrapper">
-                <h2 class="service-title">services
+                <h2 class="service-title">Services
                     <?php
                     // if user is logged in
                     if($loggedin)
                     {
                         // show welcome message
-                        echo "| welcome, " . $username;
+                        echo "| Welcome, " . $username;
                     }
                     ?>
                 </h2>
@@ -110,29 +110,29 @@
                     <?php
                         // only show edit button if logged in
                         if($loggedin){
-                            echo '<input id="edit-button" class="w3-button edit-button" type="button" value="edit">';
+                            echo '<input id="edit-button" class="w3-button edit-button" type="button" value="Edit">';
                         }
                     ?>
                 </h2>
                 <!--tile buttons-->
                 <div id="tile-buttons" class="w3-row edit-closed">
-                    <input id="remove-tile" class="w3-button tile-button" type="button" value="remove tile">
-                    <input id="add-tile" class="w3-button tile-button" type="button" value="add tile">
+                    <input id="remove-tile" class="w3-button tile-button" type="button" value="Remove Tile">
+                    <input id="add-tile" class="w3-button tile-button" type="button" value="Add Tile">
                 </div>
                 <div id="rm-tile-buttons" class="w3-row">
-                    <input id="rm-cancel" class="w3-button tile-button" type="button" value="cancel">
-                    <input id="rm-submit" class="w3-button tile-button" type="button" value="confirm selection">
+                    <input id="rm-cancel" class="w3-button tile-button" type="button" value="Cancel">
+                    <input id="rm-submit" class="w3-button tile-button" type="button" value="Confirm Selection">
                 </div>
                 <!--new tile form-->
                 <div id="tile-form" class="w3-row edit-closed">
                     <form id="new-tile-form" class="tile-form" action="/php/back-end/tile-config.php" method="post" enctype="multipart/form-data">
-                        <h3 id="form-title" class="tile-text">new tile</h3>
-                        <input id="tile-name" name="tile-name" class="w3-input tile-input" type="text" placeholder="name" required>
-                        <input id="tile-url" name="tile-url" class="w3-input tile-input" type="url" placeholder="url" required>
-                        <label class="file-upload" for="tile-img">upload an icon (optional)</label>
+                        <h3 id="form-title" class="tile-text">New Tile</h3>
+                        <input id="tile-name" name="tile-name" class="w3-input tile-input" type="text" placeholder="Name" required>
+                        <input id="tile-url" name="tile-url" class="w3-input tile-input" type="url" placeholder="Url" required>
+                        <label class="file-upload" for="tile-img">Upload an Icon (optional)</label>
                         <input id="tile-img" name="tile-img" type="file">
-                        <input id="tile-cancel" name="tile-cancel" class="w3-button form-button" type="button" value="cancel">
-                        <input id="tile-img-submit" name="tile-img-submit" class="w3-button form-button" type="submit" value="add tile">
+                        <input id="tile-cancel" name="tile-cancel" class="w3-button form-button" type="button" value="Cancel">
+                        <input id="tile-img-submit" name="tile-img-submit" class="w3-button form-button" type="submit" value="Add Tile">
                     </form>
                 </div>
                 <?php

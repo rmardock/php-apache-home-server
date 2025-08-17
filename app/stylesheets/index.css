@@ -65,7 +65,7 @@ input[type="file"]
     width: 100%;
 }
 
-.google-search-wrapper
+.duckduckgo-search-wrapper
 {
     color:#fff;
     padding: 3% 0;
@@ -162,12 +162,13 @@ input[type="checkbox"]:checked
     float: right;
 }
 
-#google-search
+#duckduckgo-search
 {
     background-color: #3c3c45;
-    background-image: url('/img/google-logo.svg');
+    background-image: url('/img/duckduckgo-icon.svg');
     background-position: 1%;
     background-repeat: no-repeat;
+    background-size: contain;
     box-sizing: border-box;
     border: 2px solid #fff;
     border-radius: 10px;

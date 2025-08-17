@@ -28,7 +28,7 @@
 -->
 <html lang="en">
     <head>
-        <title>login</title>
+        <title>Login</title>
         <!--set the viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
@@ -52,7 +52,7 @@
                 $_SESSION = array();
                 session_destroy();
                 // show incorrect login message
-                echo "<div class='w3-container w3-center message-banner'><h4>incorrect login</h4></div>";
+                echo "<div class='w3-container w3-center message-banner'><h4>Incorrect login</h4></div>";
             }
             // if sign up success
             if($signup_success)
@@ -61,19 +61,19 @@
                 $_SESSION = array();
                 session_destroy();
                 // show signup success message
-                echo "<div class='w3-container w3-center message-banner'><h4>sign up success!</h4></div>";
+                echo "<div class='w3-container w3-center message-banner'><h4>Sign up success!</h4></div>";
             }
         ?>
         <!--login form-->
         <div id="loginform" class="w3-container form-container">
             <form id="loginForm" action="/php/back-end/login-back-end.php" method="POST">
-                <h2 class="w3-center form-text">login</h2>
-                <input name="username" id="username" class="w3-input form-input" placeholder="username" autofocus required>
-                <input type="password" name="password" id="password" class="w3-input form-input" placeholder="password" required>
-                <input type="submit" id="login-submit" class="w3-btn form-button" value="submit">
+                <h2 class="w3-center form-text">Login</h2>
+                <input name="username" id="username" class="w3-input form-input" placeholder="Username" autofocus required>
+                <input type="password" name="password" id="password" class="w3-input form-input" placeholder="Password" required>
+                <input type="submit" id="login-submit" class="w3-btn form-button" value="Submit">
             </form>
             <!--homepage link-->
-            <a class="w3-btn form-button" href="/">home</a>
+            <a class="w3-btn form-button" href="/">Home</a>
         </div>
     </body>
 </html>

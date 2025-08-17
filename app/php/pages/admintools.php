@@ -23,7 +23,7 @@
 -->
 <html lang="en">
     <head>
-        <title>admin services</title>
+        <title>Admin Services</title>
         <!--set the viewport-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
@@ -41,7 +41,7 @@
     <body>
         <div class="page-wrapper">
             <div class="title-bar">
-                <h1 class="page-title">admin services</h1>
+                <h1 class="page-title">Admin Services</h1>
                 <?php
                     // show welcome message
                     echo "<h4 class=\"username\">welcome, " . $username . "</h4>";
@@ -49,7 +49,7 @@
             </div>
             <!--admin links-->
             <div class="w3-row services-wrapper">
-                <h2 class="service-title">services</h2>
+                <h2 class="service-title">Services</h2>
                 <!--load admin tiles from config-->
                 <?php
                     // set args
