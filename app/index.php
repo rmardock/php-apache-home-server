@@ -106,7 +106,7 @@
             </div>
             <!--tiles pane-->
             <div class="w3-row services-wrapper">
-                <h2 class="service-title">tiles
+                <h2 class="service-title">Tiles
                     <?php
                         // only show edit button if logged in
                         if($loggedin){
