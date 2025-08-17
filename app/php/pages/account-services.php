@@ -45,7 +45,7 @@
                 <?php
                     if(!is_null($loggedin))
                     {
-                        echo "<h4 class=\"username\">welcome, " . $username . "</h4>";
+                        echo "<h4 class=\"username\">Welcome, " . $username . "</h4>";
                     }
                 ?>
             </div>
